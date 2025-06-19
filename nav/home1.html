@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NextTech IT Solutions - Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    /* CSS Variables for Light/Dark Mode */
+    :root {
+      --bg-light: #ffffff;
+      --bg-dark: #121212;
+      --text-light: #333333;
+      --text-dark: #f1f1f1;
+      --primary-color: #002b5c;
+      --primary-color-dark: #1a73e8;
+      --secondary-color-light: #d1e3ff;
+      --secondary-color-dark: #a8c0ff;
+      --card-bg-light: #ffffff;
+      --card-bg-dark: #1e1e1e;
+      --footer-bg-light: #002b5c;
+      --footer-bg-dark: #121212;
+    }
+
+    html[data-theme="light"] {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    html[data-theme="dark"] {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    /* Loader Styling */
+    #loader {
+      position: fixed;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: var(--bg-light);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    html[data-theme="dark"] #loader {
+      background: var(--bg-dark);
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--primary-color);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+    html[data-theme="dark"] .navbar {
+      background-color: #121a34;
+    }
+
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: var(--secondary-color-light) !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    html[data-theme="dark"] .nav-link {
+      color: var(--secondary-color-dark) !important;
+    }
+
+    .nav-link:hover {
+      color: #ffffff !important;
+      text-decoration: underline;
+    }
+
+    /* Dark mode toggle button */
+    #darkModeToggle {
+      background: transparent;
+      border: 1px solid var(--secondary-color-light);
+      color: var(--secondary-color-light);
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      margin-left: 15px;
+    }
+    #darkModeToggle:hover {
+      background-color: var(--secondary-color-light);
+      color: var(--primary-color);
+    }
+    html[data-theme="dark"] #darkModeToggle {
+      border-color: var(--secondary-color-dark);
+      color: var(--secondary-color-dark);
+    }
+    html[data-theme="dark"] #darkModeToggle:hover {
+      background-color: var(--secondary-color-dark);
+      color: var(--primary-color-dark);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      background: #000;
+    }
+    .hero-section video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 15px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(to right, var(--primary-color), #004085);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    html[data-theme="dark"] .cta-section {
+      background: linear-gradient(to right, #121a34, #22355b);
+    }
+    .cta-section h2 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .cta-section p {
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+    .btn-light {
+      color: var(--primary-color);
+      background-color: #ffffff;
+      border: none;
+      font-weight: 600;
+      padding: 10px 25px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-light:hover {
+      background-color: #e2e6ea;
+    }
+
+    /* Testimonial & Blog Sections */
+    .testimonial, .blog-section {
+      padding: 60px 20px;
+    }
+    .testimonial {
+      background-color: #f8f9fa;
+    }
+    html[data-theme="dark"] .testimonial {
+      background-color: #1e1e1e;
+    }
+
+    .testimonial .card, .blog-section .card {
+      border: none;
+      background-color: var(--card-bg-light);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+    html[data-theme="dark"] .testimonial .card,
+    html[data-theme="dark"] .blog-section .card {
+      background-color: var(--card-bg-dark);
+      box-shadow: 0 0 12px rgba(0,0,0,0.7);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--footer-bg-light);
+      color: var(--secondary-color-light);
+      padding: 30px 0;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    html[data-theme="dark"] footer {
+      background-color: var(--footer-bg-dark);
+      color: var(--secondary-color-dark);
+    }
+    footer a {
+      color: var(--secondary-color-light);
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">NextTech</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+          <li>
+            <button id="darkModeToggle" title="Toggle Dark Mode">Dark Mode</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <video autoplay muted loop playsinline>
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
+      <!-- fallback -->
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content" data-aos="fade-left
+    <div class="hero-content" data-aos="fade-left" data-aos-duration="1000">
+      <h1>Empowering Your Digital Future</h1>
+      <p>Innovative IT Solutions Tailored For Your Success</p>
+      <a href="services.html" class="btn btn-light btn-lg">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- Call To Action Section -->
+  <section class="cta-section" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container">
+      <h2>Ready to Transform Your Business?</h2>
+      <p>Contact us today and take the first step towards digital excellence.</p>
+      <a href="contact.html" class="btn btn-light btn-lg">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container">
+      <h2 class="mb-5 text-center">What Our Clients Say</h2>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4">
+          <div class="card p-4 shadow-sm">
+            <p>"NextTech transformed our IT infrastructure with professionalism and expertise. Highly recommended!"</p>
+            <h5 class="mt-3 mb-0">- Priya S.</h5>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 shadow-sm">
+            <p>"Their team is very responsive and delivered our custom software ahead of schedule."</p>
+            <h5 class="mt-3 mb-0">- Rahul K.</h5>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 shadow-sm">
+            <p>"Excellent support and innovative solutions that helped grow our business online."</p>
+            <h5 class="mt-3 mb-0">- Anjali M.</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-section" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container">
+      <h2 class="mb-5 text-center">Latest From Our Blog</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Blog 1" />
+            <div class="card-body">
+              <h5 class="card-title">Top IT Trends in 2025</h5>
+              <p class="card-text">Stay ahead with the latest technology trends shaping the IT industry this year.</p>
+              <a href="blog.html#trends2025" class="btn btn-primary btn-sm">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Blog 2" />
+            <div class="card-body">
+              <h5 class="card-title">Cybersecurity Best Practices</h5>
+              <p class="card-text">Protect your data and infrastructure with these essential cybersecurity tips.</p>
+              <a href="blog.html#cybersecurity" class="btn btn-primary btn-sm">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Blog 3" />
+            <div class="card-body">
+              <h5 class="card-title">Why Cloud Migration Matters</h5>
+              <p class="card-text">Discover the benefits of cloud computing and how it can boost your business efficiency.</p>
+              <a href="blog.html#cloudmigration" class="btn btn-primary btn-sm">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section py-5" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container">
+      <h2 class="mb-5 text-center">Meet Our Team</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-3 text-center">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe" class="rounded-circle mb-3" width="150" height="150" />
+          <h5>John Doe</h5>
+          <p>CEO & Founder</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith" class="rounded-circle mb-3" width="150" height="150" />
+          <h5>Jane Smith</h5>
+          <p>Chief Technology Officer</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Michael Brown" class="rounded-circle mb-3" width="150" height="150" />
+          <h5>Michael Brown</h5>
+          <p>Lead Developer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 NextTech IT Solutions. All rights reserved.</p>
+      <p>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a> |
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    // Initialize AOS animation library
+    AOS.init();
+
+    // Loader - hide on window load
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 500);
+      }
+    });
+
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const htmlElement = document.documentElement;
+
+    // Load saved theme from localStorage or default to light
+    let savedTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', savedTheme);
+    darkModeToggle.textContent = savedTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+
+    darkModeToggle.addEventListener('click', () => {
+      let currentTheme = htmlElement.getAttribute('data-theme');
+      let newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      darkModeToggle.textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    });
+  </script>
+</body>
+</html>

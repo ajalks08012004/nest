@@ -1,0 +1,208 @@
+/* style123.css */
+
+/* Root color palette */
+:root {
+  --primary-color: #0052cc;    /* Strong blue */
+  --secondary-color: #00aaff;  /* Light blue accent */
+  --accent-color: #ff6f61;     /* Coral/orange accent */
+  --text-color: #333333;       /* Dark grey text */
+  --background-light: #f9fbff; /* Very light blue background */
+  --footer-bg: #e8f0fe;        /* Light blue for footer */
+}
+
+/* Reset box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-light);
+  color: var(--text-color);
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 6px rgba(0, 82, 204, 0.3);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #fff !important;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: #cce4ff !important;
+  margin-right: 1.25rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color) !important;
+  text-decoration: underline;
+}
+
+/* Navbar toggler icon */
+.navbar-light .navbar-toggler-icon {
+  background-image: url(
+    "data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"
+  );
+}
+
+/* Carousel styling */
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 82, 204, 0.25);
+}
+
+/* Main content */
+.main-content h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: 600;
+  border-top: 1px solid var(--primary-color);
+  margin-top: 3rem;
+}
+/* Enhance the card appearance */
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+/* Hover effect for card */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Card title styling */
+.card-title {
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+/* Button hover style */
+.card .btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card .btn:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.05);
+}
+
+/* Optional: Slight color pop on card text hover */
+.card:hover .card-text {
+  color: #333;
+}
+
+
+
+
+.navbar {
+      background-color: #003366;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: #d1e3ff !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ffffff !important;
+      text-decoration: underline;
+    }
+
+    /* Carousel Styling */
+    .carousel-item img {
+      height: 90vh;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .carousel {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(to right, #003366, #0056b3);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-section .btn {
+      font-size: 1.1rem;
+      padding: 12px 30px;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #003366;
+      color: #d1e3ff;
+      padding: 30px 0;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #a0c7ff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }

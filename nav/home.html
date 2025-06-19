@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IBM Professional Website</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  
+  <!-- Custom Styles -->
+  <style>
+    /* Navbar Styling */
+    .navbar {
+      background-color: #003366;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: #d1e3ff !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ffffff !important;
+      text-decoration: underline;
+    }
+
+    /* Carousel Styling */
+    .carousel-item img {
+      height: 90vh;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .carousel {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(to right, #003366, #0056b3);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-section .btn {
+      font-size: 1.1rem;
+      padding: 12px 30px;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #003366;
+      color: #d1e3ff;
+      padding: 30px 0;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #a0c7ff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header with Navbar -->
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">IBM</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+          <li class="nav-item"><a class="nav-link" href="services12.html">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link" href="industries.html">INDUSTRIES</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact123.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Carousel Section -->
+<div id="ibmCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://c4.wallpaperflare.com/wallpaper/662/51/829/ibm-technology-company-computer-wallpaper-preview.jpg" class="d-block w-100" alt="Tech Image 1">
+    </div>
+    <div class="carousel-item">
+      <img src="https://c4.wallpaperflare.com/wallpaper/914/746/419/abstract-digital-art-minimalism-simple-background-wallpaper-preview.jpg" class="d-block w-100" alt="Tech Image 2">
+    </div>
+    <div class="carousel-item">
+      <img src="https://c4.wallpaperflare.com/wallpaper/959/218/341/computer-blue-neon-backlight-wallpaper-preview.jpg" class="d-block w-100" alt="Tech Image 3">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#ibmCarousel" data-bs-slide="200">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#ibmCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Transform Your Business with IBM</h2>
+    <p>From cloud to AI, our cutting-edge solutions help you innovate and grow with confidence.</p>
+    <a href="services12.html" class="btn btn-light">Explore Our Services</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p class="mb-1">© 2025 IBM Corporation. All rights reserved.</p>
+    <p>
+      <a href="#">Privacy</a> | 
+      <a href="#">Terms</a> | 
+      <a href="#">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

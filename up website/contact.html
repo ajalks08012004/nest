@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nest</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#2563eb',secondary:'#4f46e5'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="navbar">
+        <div class="container mx-auto px-4 h-[70px] flex items-center justify-between">
+            <a href="index.html" class="logo text-2xl font-semibold text-gray-900">Nest</a>
+            
+            <div class="desktop-menu">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-800 font-medium">Home</a></li>
+                    <li><a href="about.html" class="nav-link text-gray-800 font-medium">About</a></li>
+                    <li><a href="services.html" class="nav-link text-gray-800 font-medium">Services</a></li>
+                    <li><a href="contact.html" class="nav-link text-gray-800 font-medium active">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <!-- Hero Section -->
+    <section class="pt-[70px] pb-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center py-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Contact Us</h1>
+                <p class="text-xl text-blue-100">We'd love to hear from you. Get in touch with our team today.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                    <p class="text-gray-600 mb-8">Have a project in mind or questions about our services? Fill out the form and we'll get back to you within 24 hours.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="ri-map-pin-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Our Office</h3>
+                                <p class="text-gray-600">123 Innovation Drive<br>San Francisco, CA 94103</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="ri-phone-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Phone</h3>
+                                <p class="text-gray-600">+1 (555) 123-4567<br>Mon-Fri, 9am-5pm PST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="ri-mail-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Email</h3>
+                                <p class="text-gray-600">info@nestcompany.com<br>support@nestcompany.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                        <div class="mb-6">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white px-6 py-3 font-medium !rounded-button hover:bg-blue-700 transition-colors">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section class="pb-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="rounded-lg overflow-hidden shadow-md">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.538962143581!2d-122.41941568468248!3d37.77492997975948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Let's discuss how we can help you achieve your goals with our innovative solutions.</p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors inline-block">Get in Touch</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Nest</h3>
+                    <p class="text-gray-400 mb-6">Innovative solutions for modern businesses. We help companies transform their digital presence.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#web" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="services.html#marketing" class="text-gray-400 hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="services.html#security" class="text-gray-400 hover:text-white transition-colors">Cybersecurity</a></li>
+                        <li><a href="services.html#cloud" class="text-gray-400 hover:text-white transition-colors">Cloud Solutions</a></li>
+                        <li><a href="services.html#design" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="about.html#team" class="text-gray-400 hover:text-white transition-colors">Our Team</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="ri-map-pin-line mr-3 mt-1"></i>
+                            <span class="text-gray-400">123 Innovation Drive, San Francisco, CA 94103</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-phone-line mr-3"></i>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-3"></i>
+                            <span class="text-gray-400">info@nestcompany.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-gray-800 my-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 Nest. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

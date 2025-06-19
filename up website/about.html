@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Nest</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#2563eb',secondary:'#4f46e5'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="navbar">
+        <div class="container mx-auto px-4 h-[70px] flex items-center justify-between">
+            <a href="index.html" class="logo text-2xl font-semibold text-gray-900">Nest</a>
+            
+            <div class="desktop-menu">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-800 font-medium">Home</a></li>
+                    <li><a href="about.html" class="nav-link text-gray-800 font-medium active">About</a></li>
+                    <li><a href="services.html" class="nav-link text-gray-800 font-medium">Services</a></li>
+                    <li><a href="contact.html" class="nav-link text-gray-800 font-medium">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+    <!-- Hero Section -->
+    <section class="pt-[70px] pb-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center py-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">About Nest</h1>
+                <p class="text-xl text-blue-100">We're a team of passionate innovators dedicated to transforming businesses through technology.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Story -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://readdy.ai/api/search-image?query=A%20professional%20team%20of%20diverse%20business%20people%20collaborating%20in%20a%20modern%20office%20environment.%20They%20are%20gathered%20around%20a%20table%20with%20laptops%20and%20digital%20devices%2C%20engaged%20in%20discussion.%20The%20image%20shows%20a%20mix%20of%20genders%20and%20ethnicities%2C%20all%20dressed%20in%20business%20casual%20attire.%20The%20atmosphere%20is%20positive%20and%20productive%2C%20with%20natural%20lighting%20and%20a%20contemporary%20office%20design%20featuring%20clean%20lines%20and%20minimal%20decoration.&width=600&height=400&seq=team1&orientation=landscape" alt="Our Team" class="rounded-lg shadow-md w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">Our Story</h2>
+                    <p class="text-gray-700 mb-4">Founded in 2018, Nest has quickly established itself as a leader in providing innovative digital solutions for businesses of all sizes.</p>
+                    <p class="text-gray-700 mb-6">Our team of experts combines technical excellence with creative thinking to deliver results that exceed expectations. We believe in building long-term partnerships with our clients, understanding their unique challenges, and crafting solutions that drive real business growth.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="mission.html">
+  <button class="bg-primary text-white px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-blue-700 transition-colors">
+    Our Mission
+  </button>
+</a>
+
+<a href="value.html">
+  <button class="bg-white text-primary px-6 py-3 font-medium border border-primary !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors">
+    Our Values
+  </button>
+</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Meet Our Team</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">The brilliant minds behind our success, dedicated to delivering exceptional results.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Team Member" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Sarah Johnson</h3>
+                    <p class="text-primary font-medium mb-3">CEO & Founder</p>
+                    <p class="text-gray-600">Visionary leader with 15+ years in digital transformation.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Michael Chen</h3>
+                    <p class="text-primary font-medium mb-3">CTO</p>
+                    <p class="text-gray-600">Technology expert specializing in scalable architectures.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Team Member" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Emily Rodriguez</h3>
+                    <p class="text-primary font-medium mb-3">Marketing Director</p>
+                    <p class="text-gray-600">Creative strategist driving brand growth and engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Values Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Our Core Values</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">The principles that guide everything we do at Nest.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-lightbulb-flash-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Innovation</h3>
+                    <p class="text-gray-600 text-center">We constantly push boundaries to deliver cutting-edge solutions that drive real impact.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-team-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Collaboration</h3>
+                    <p class="text-gray-600 text-center">We believe the best results come from working closely with our clients and each other.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-shield-check-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Integrity</h3>
+                    <p class="text-gray-600 text-center">We're committed to doing what's right, even when no one is watching.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Let's discuss how we can help you achieve your goals with our innovative solutions.</p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors inline-block">Get in Touch</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Nest</h3>
+                    <p class="text-gray-400 mb-6">Innovative solutions for modern businesses. We help companies transform their digital presence.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#web" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="services.html#marketing" class="text-gray-400 hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="services.html#security" class="text-gray-400 hover:text-white transition-colors">Cybersecurity</a></li>
+                        <li><a href="services.html#cloud" class="text-gray-400 hover:text-white transition-colors">Cloud Solutions</a></li>
+                        <li><a href="services.html#design" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="about.html#team" class="text-gray-400 hover:text-white transition-colors">Our Team</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="ri-map-pin-line mr-3 mt-1"></i>
+                            <span class="text-gray-400">123 Innovation Drive, San Francisco, CA 94103</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-phone-line mr-3"></i>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-3"></i>
+                            <span class="text-gray-400">info@nestcompany.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-gray-800 my-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 Nest. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

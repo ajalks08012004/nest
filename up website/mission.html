@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission | Nest</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#2563eb',secondary:'#4f46e5'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="navbar">
+        <div class="container mx-auto px-4 h-[70px] flex items-center justify-between">
+            <a href="../index.html" class="logo text-2xl font-semibold text-gray-900">Nest</a>
+            
+            <div class="desktop-menu">
+                <ul class="flex space-x-8">
+                    <li><a href="../index.html" class="nav-link text-gray-800 font-medium">Home</a></li>
+                    <li><a href="../about.html" class="nav-link text-gray-800 font-medium">About</a></li>
+                    <li><a href="mission.html" class="nav-link text-gray-800 font-medium active">Mission</a></li>
+                    <li><a href="values.html" class="nav-link text-gray-800 font-medium">Values</a></li>
+                    <li><a href="../contact.html" class="nav-link text-gray-800 font-medium">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="mobile-menu">
+        <a href="../index.html" class="nav-link text-gray-800 font-medium">Home</a>
+        <a href="../about.html" class="nav-link text-gray-800 font-medium">About</a>
+        <a href="mission.html" class="nav-link text-gray-800 font-medium active">Mission</a>
+        <a href="values.html" class="nav-link text-gray-800 font-medium">Values</a>
+        <a href="../contact.html" class="nav-link text-gray-800 font-medium">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-[70px] pb-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center py-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Our Mission</h1>
+                <p class="text-xl text-blue-100">Why we exist and what drives us forward</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Content -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-blue-50 p-8 md:p-12 rounded-xl mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-primary">Empowering Digital Transformation</h2>
+                <p class="text-lg text-gray-700 mb-6">At Nest, our mission is to empower businesses of all sizes through innovative, tailored digital solutions that drive measurable growth and create lasting competitive advantages.</p>
+                <div class="w-20 h-1 bg-primary mb-6"></div>
+                <p class="text-gray-600">We believe technology should be an enabler, not a barrier. Our team is dedicated to breaking down complex digital challenges and transforming them into intuitive, powerful solutions that help our clients thrive in the digital age.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-flashlight-line ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Our Purpose</h3>
+                    <p class="text-gray-600">To democratize access to enterprise-grade digital solutions, making cutting-edge technology accessible and actionable for businesses at every stage of growth.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-arrow-up-circle-line ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Our Vision</h3>
+                    <p class="text-gray-600">To be the most trusted partner for digital transformation, recognized for our ability to turn technological potential into tangible business results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to transform your business?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Let's discuss how we can help you achieve your digital goals.</p>
+            <a href="../contact.html" class="bg-white text-primary px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors inline-block">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <!-- Footer content same as about.html -->
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

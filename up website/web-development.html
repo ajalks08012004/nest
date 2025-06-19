@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development | Nest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .service-card { transition: all 0.3s ease; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-900">Nest</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-primary">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-primary">About</a>
+                <a href="services.html" class="text-gray-600 hover:text-primary">Services</a>
+                <a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <i class="ri-menu-line text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">Web Development</h1>
+            <p class="text-xl mb-8">Custom digital experiences that engage your audience</p>
+            <a href="contact.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium inline-block">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-window-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Custom Websites</h3>
+                    <p class="text-gray-600">Beautiful, responsive websites designed to convert visitors into customers.</p>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-shopping-cart-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">E-Commerce</h3>
+                    <p class="text-gray-600">Powerful online stores that drive sales and enhance customer experience.</p>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-apps-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Web Apps</h3>
+                    <p class="text-gray-600">Custom applications that streamline your business operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-blue-600 text-white py-12 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4">Ready to build your online presence?</h2>
+            <a href="contact.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium inline-block">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Nest. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

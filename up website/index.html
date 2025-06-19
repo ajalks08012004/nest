@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nest - Modern Solutions</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#2563eb',secondary:'#4f46e5'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css"/>S
+    <style>
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        
+        /* Component styles */
+        .navbar {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #2563eb;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-hover:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 h-[70px] flex items-center justify-between">
+            <a href="index.html" class="logo text-2xl font-semibold text-gray-900 animate-fade-in">Nest</a>
+            
+            <div class="desktop-menu animate-fade-in delay-100">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-800 font-medium">Home</a></li>
+                    <li><a href="about.html" class="nav-link text-gray-800 font-medium">About</a></li>
+                    <li><a href="services.html" class="nav-link text-gray-800 font-medium">Services</a></li>
+                    <li><a href="contact.html" class="nav-link text-gray-800 font-medium">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="hamburger animate-fade-in delay-100">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-[70px]">
+        <div class="relative w-full h-[600px] flex items-center animate-fade-in" 
+             style="background-image: url('https://readdy.ai/api/search-image?query=A%20modern%2C%20minimalist%20office%20space%20with%20clean%20lines%20and%20natural%20light.%20The%20left%20side%20has%20a%20smooth%20gradient%20to%20white%2C%20while%20the%20right%20side%20shows%20a%20contemporary%20workspace%20with%20glass%20partitions%2C%20sleek%20furniture%2C%20and%20subtle%20technology%20elements.%20The%20image%20has%20a%20professional%2C%20airy%20feel%20with%20a%20color%20palette%20of%20whites%2C%20light%20blues%2C%20and%20soft%20neutrals.%20The%20transition%20from%20left%20to%20white%20is%20seamless%20and%20natural.&width=1600&height=800&seq=hero1&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="container mx-auto px-4 w-full animate-fade-in-up delay-100">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Innovative Solutions for Modern Businesses</h1>
+                    <p class="text-lg text-gray-700 mb-8">We help companies transform their digital presence with cutting-edge technology and strategic insights.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-primary text-white px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-blue-700 transition-colors btn-hover">Get Started</button>
+                        <button class="bg-white text-primary px-6 py-3 font-medium border border-primary !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors btn-hover">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-4">Our Core Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover how we can help your business thrive in the digital landscape with our comprehensive suite of services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all animate-fade-in-up delay-100">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-code-line text-primary ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Web Development</h3>
+                    <p class="text-gray-600">Custom websites and applications built with the latest technologies to deliver exceptional user experiences.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all animate-fade-in-up delay-200">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-line-chart-line text-primary ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Digital Marketing</h3>
+                    <p class="text-gray-600">Strategic marketing campaigns that drive traffic, increase engagement, and convert visitors into loyal customers.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all animate-fade-in-up delay-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-shield-check-line text-primary ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Cybersecurity</h3>
+                    <p class="text-gray-600">Comprehensive security solutions to protect your business data and maintain customer trust in your brand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from businesses that have transformed their operations with our solutions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md animate-fade-in-left">
+                    <div class="flex items-center mb-4">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Nest transformed our outdated website into a powerful sales tool. Their team was professional, responsive, and delivered beyond our expectations."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Michael Richardson</h4>
+                            <p class="text-sm text-gray-600">CEO, TechVision Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md animate-fade-in-up">
+                    <div class="flex items-center mb-4">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6">"The digital marketing campaign Nest created for us resulted in a 200% increase in qualified leads. Their strategic approach and attention to detail made all the difference."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">Marketing Director, GrowthLabs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md animate-fade-in-right">
+                    <div class="flex items-center mb-4">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                        <i class="ri-star-fill text-yellow-400 ml-1"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Working with Nest on our cybersecurity infrastructure gave us peace of mind. Their expertise and proactive approach helped us prevent potential breaches before they happened."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">David Thompson</h4>
+                            <p class="text-sm text-gray-600">CTO, SecureFinance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white animate-fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Let's discuss how we can help you achieve your goals with our innovative solutions.</p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors inline-block btn-hover">Get in Touch</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="animate-fade-in">
+                    <h3 class="text-xl font-semibold mb-4">Nest</h3>
+                    <p class="text-gray-400 mb-6">Innovative solutions for modern businesses. We help companies transform their digital presence.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="animate-fade-in delay-100">
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#web" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="services.html#marketing" class="text-gray-400 hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="services.html#security" class="text-gray-400 hover:text-white transition-colors">Cybersecurity</a></li>
+                        <li><a href="services.html#cloud" class="text-gray-400 hover:text-white transition-colors">Cloud Solutions</a></li>
+                        <li><a href="services.html#design" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="animate-fade-in delay-200">
+                    <h3 class="text-xl font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="about.html#team" class="text-gray-400 hover:text-white transition-colors">Our Team</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="animate-fade-in delay-300">
+                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="ri-map-pin-line mr-3 mt-1"></i>
+                            <span class="text-gray-400">123 Innovation Drive, San Francisco, CA 94103</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-phone-line mr-3"></i>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-3"></i>
+                            <span class="text-gray-400">info@nestcompany.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-gray-800 my-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 Nest. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation triggers on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.animate-fade-in, .animate-fade-in-up, .animate-fade-in-left, .animate-fade-in-right');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Initial check
+            animateOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
